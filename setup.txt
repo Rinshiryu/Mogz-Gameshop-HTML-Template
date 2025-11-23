@@ -1,0 +1,192 @@
+📘 Mogz – Setup Instructions
+
+Thank you for purchasing Mogz – Game Store Frontend Template.
+Follow the steps below to install, customize, and run the template smoothly.
+
+📁 1. File Structure
+/Mogz/
+│── index.html
+│── gallery.html
+│── cart.html
+│── style.css
+│── gallery.css
+│── cart.css
+│── script.js
+│── /images
+│── /assets (optional)
+
+
+Make sure all files stay in the same folder hierarchy so links and images work correctly.
+
+🖥️ 2. How to Open the Template
+
+You do NOT need any backend or special server.
+
+You can open the project directly:
+
+Right-click index.html
+
+Choose Open With → Chrome / Edge / Firefox
+
+Or drag index.html into your browser.
+
+🔧 3. Editing the Template
+✔ Editing Text
+
+Open any .html file using:
+
+VS Code (recommended)
+
+Sublime Text
+
+Notepad++
+
+Search for the section you want to edit:
+
+Example editing a game card:
+
+<h3>Cyberpunk 2077</h3>
+<span class="price">$14.00</span>
+
+
+Simply replace the text.
+
+🎨 4. Changing Images
+
+Replace the files in /images or update the <img src=""> path in HTML:
+
+<img src="eldenring.jpg" alt="">
+
+
+Make sure your image name matches the file path.
+
+Recommended image size:
+
+Slider: 1920×1080
+
+Game cards: 600×800
+
+Cart thumbnails: 200×200
+
+🛒 5. Using the Add to Cart System
+
+The cart uses LocalStorage, meaning no backend is required.
+
+To add a new game to the catalog, copy this block:
+
+<div class="game-card">
+    <img src="image.jpg" alt="">
+    <h3>Game Title</h3>
+    <p class="genre">Genre • Action</p>
+    <span class="price">$12.00</span>
+    <button class="buy-btn" onclick="addToCart('Game Title', 12.00, 'image.jpg')">
+        Add to Cart
+    </button>
+</div>
+
+
+Make sure:
+
+Title, price, and image all match your game.
+
+📦 6. Cart Page Setup
+
+The cart.html file automatically loads:
+
+Game image
+
+Quantity
+
+Price
+
+Total price
+
+You do not need to configure anything manually.
+
+To reset the cart:
+
+localStorage.removeItem("cart");
+
+📱 7. Mobile Responsiveness
+
+The navbar automatically becomes a hamburger menu.
+Make sure these files are included:
+
+<link rel="stylesheet" href="style.css">
+<script src="script.js"></script>
+
+
+If the menu does not open, check that your HTML contains:
+
+<div class="hamburger" id="hamburgerBtn">...</div>
+<ul class="nav-menu" id="navMenu">...</ul>
+
+🎚️ 8. Slider Setup (Swiper.js)
+
+Include the CDN on pages using the slider:
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
+<script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+
+
+Initialize in script.js:
+
+const swiper = new Swiper(".mySwiper", {
+    loop: true,
+    pagination: { el: ".swiper-pagination" }
+});
+
+🧩 9. Customizing Colors / Theme
+
+All theme colors are located in the top section of style.css:
+
+:root {
+    --bg-color: #0d0d0d;
+    --card-color: #1a1a1a;
+    --text-color: #ffffff;
+    --accent: #4da3ff;
+}
+
+
+Change accent color example:
+
+--accent: #ff4d4d;
+
+
+(This will update buttons, highlights, links, etc.)
+
+🌍 10. Uploading to Hosting
+
+You can upload the entire folder to:
+
+Netlify
+
+Vercel
+
+GitHub Pages
+
+cPanel hosting
+
+Itch.io Web project
+
+No backend configuration needed.
+
+🛠️ 11. Troubleshooting
+❗ Images not loading
+
+✔ Check if filename and extension match exactly.
+✔ Ensure images are inside the correct folder.
+
+❗ Hamburger menu not working
+
+✔ Ensure the JS file is linked at the bottom of the page.
+✔ The ID names must match exactly.
+
+❗ Styles not updating
+
+✔ Clear browser cache (Ctrl + F5).
+✔ Verify the CSS file path.
+
+🎉 Done! You're Ready to Launch
+
+Your Mogz game store template is now ready to use, customize, and publish.

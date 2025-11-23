@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <link rel="stylesheet" href="gallery.css">
+</head>
+<body>
+<nav>
+    <div class="nav-container">
+        <div class="logo">Mogz</div>
+
+        <div class="hamburger" id="hamburgerBtn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <ul class="nav-menu" id="navMenu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html">About</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="cart.html">Cart</a></li>
+        </ul>
+    </div>
+</nav>
+
+<section class="catalog-header">
+    <h1>Game Catalog</h1>
+    <p>Discover hundreds of selected games at the best prices.</p>
+
+    <div class="search-filter">
+        <input type="text" placeholder="Search games...">
+        <select>
+            <option>All Genres</option>
+            <option>Action</option>
+            <option>Adventure</option>
+            <option>RPG</option>
+            <option>Shooter</option>
+            <option>Strategy</option>
+        </select>
+    </div>
+</section>
+
+<section class="catalog-grid">     
+    <div class="game-card">
+        <img src="images/cyberpunk.jfif" alt="">
+        <h3>Cyberpunk 2077</h3>
+        <p class="genre">Action • Sci-Fi</p>
+        <span class="price">$14.00</span>
+        <button class="buy-btn" onclick="addToCart('Cyberpunk 2077', 14.00, 'images/cyberpunk.jfif')">
+            Add to Cart
+        </button>
+    </div>
+
+    <div class="game-card">
+        <img src="images/bloodborne2.jpg" alt="">
+        <h3>Bloodborne</h3>
+        <p class="genre">Adventure • Action</p>
+        <span class="price">$12.00</span>
+        <button class="buy-btn" onclick="addToCart('Bloodborne', 12.00, 'images/bloodborne2.jpg')">
+            Add to Cart
+        </button>
+    </div>
+
+    <div class="game-card">
+        <img src="images/elden3.jpg" alt="">
+        <h3>Elden Ring</h3>
+        <p class="genre">Adventure • Action</p>
+        <span class="price">$10.00</span>
+        <button class="buy-btn" onclick="addToCart('Elden Ring', 10.00, 'images/elden3.jpg')">
+            Add to Cart
+        </button>
+    </div>
+
+    <div class="game-card">
+        <img src="images/eldenring.jpg" alt="">
+        <h3>Elden Ring Nightreign</h3>
+        <p class="genre">Action • Co-op</p>
+        <span class="price">$17.00</span>
+        <button class="buy-btn" onclick="addToCart('Elden Ring Nightreign', 17.00, 'images/eldenring.jpg')">
+            Add to Cart
+        </button>
+    </div>
+
+    <div class="game-card">
+        <img src="images/pe3r.jpg" alt="">
+        <h3>Persona 3 Reload</h3>
+        <p class="genre">JRPG</p>
+        <span class="price">$13.00</span>
+        <button class="buy-btn" onclick="addToCart('Persona 3 Reload', 13.00, 'images/pe3r.jpg')">
+            Add to Cart
+        </button>
+    </div>
+
+    <div class="game-card">
+        <img src="images/persona.jpg" alt="">
+        <h3>Persona 5 Royal</h3>
+        <p class="genre">JRPG</p>
+        <span class="price">$14.00</span>
+        <button class="buy-btn" onclick="addToCart('Persona 5 Royal', 14.00, 'images/persona.jpg')">
+            Add to Cart
+        </button>
+    </div>
+
+    <div class="game-card">
+        <img src="images/p5t.jpg" alt="">
+        <h3>Persona 5 Tactica</h3>
+        <p class="genre">JRPG • Strategy</p>
+        <span class="price">$14.00</span>
+        <button class="buy-btn" onclick="addToCart('Persona 5 Tactica', 14.00, 'images/p5t.jpg')">
+            Add to Cart
+        </button>
+    </div>
+
+    <div class="game-card">
+        <img src="images/dark.jpg" alt="">
+        <h3>Dark Souls 3</h3>
+        <p class="genre">Adventure • RPG</p>
+        <span class="price">$14.00</span>
+        <button class="buy-btn" onclick="addToCart('Dark Souls 3', 14.00, 'images/dark.jpg')">
+            Add to Cart
+        </button>
+    </div>
+</section>
+
+<!-- footer -->
+<footer class="footer">
+    <div class="footer-container">
+
+        <div class="footer-col">
+            <h3>Mogz</h3>
+            <p>Your trusted digital game store. Find your favorite games at the best prices.</p>
+        </div>
+
+        <div class="footer-col">
+            <h4>Menu</h4>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">Discount</a></li>
+                <li><a href="#">About Us</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Support</h4>
+            <ul>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Help Center</a></li>
+                <li><a href="#">Refund Policy</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Follow Us</h4>
+            <div class="footer-social">
+                <a href="#">🌐</a>
+                <a href="#">📘</a>
+                <a href="#">🐦</a>
+                <a href="#">📸</a>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2025 Mogz Store — All Rights Reserved.</p>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+
+<script>
+function addToCart(name, price, image) {
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    cart.push({
+        name: name,
+        price: price,
+        image: image,
+        qty: 1
+    });
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+    window.location.href = "cart.html";
+}
+</script>
+
+</body>
+</html>

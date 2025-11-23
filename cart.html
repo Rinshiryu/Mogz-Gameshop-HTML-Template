@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart</title>
+    <link rel="stylesheet" href="cart.css">
+</head>
+<body>
+<nav>
+    <div class="nav-container">
+        <div class="logo">Mogz</div>
+
+        <div class="hamburger" id="hamburgerBtn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <ul class="nav-menu" id="navMenu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html">About</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="cart.html">Cart</a></li>
+        </ul>
+    </div>
+</nav>
+    <h1>Your Cart</h1>
+    <div id="cartList"></div>
+    <div class="cart-actions">
+    <button class="checkout-btn" onclick="checkout()">Checkout</button>
+    <button class="clear-btn" onclick="clearCart()">Clear Cart</button>
+</div>
+    <h2 class="total" id="totalPrice"></h2>
+
+<!-- footer -->
+<footer class="footer">
+    <div class="footer-container">
+
+        <div class="footer-col">
+            <h3>Mogz</h3>
+            <p>Your trusted digital game store. Find your favorite games at the best prices.</p>
+        </div>
+
+        <div class="footer-col">
+            <h4>Menu</h4>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">Discount</a></li>
+                <li><a href="#">About Us</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Support</h4>
+            <ul>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Help Center</a></li>
+                <li><a href="#">Refund Policy</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Follow Us</h4>
+            <div class="footer-social">
+                <a href="#">🌐</a>
+                <a href="#">📘</a>
+                <a href="#">🐦</a>
+                <a href="#">📸</a>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2025 Mogz Store — All Rights Reserved.</p>
+    </div>
+</footer>
+<script src="cart.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
